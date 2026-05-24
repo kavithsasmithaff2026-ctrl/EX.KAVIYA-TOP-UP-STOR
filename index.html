@@ -59,6 +59,57 @@
     </div>
   </div>
 </div>
+<div class="bg-white/10 rounded-3xl p-6 mt-10 border border-cyan-500">
+  <h2 class="text-2xl font-bold text-center mb-6">Place Your Order</h2>
 
+  <form action="https://wa.me/94726198188" method="get" target="_blank">
+
+    <input
+      type="text"
+      id="uid"
+      placeholder="Enter Free Fire UID"
+      class="w-full p-4 rounded-xl text-black mb-4"
+      required
+    />
+
+    <select
+      id="package"
+      class="w-full p-4 rounded-xl text-black mb-4"
+    >
+      <option>25 Diamonds — LKR 85</option>
+      <option>50 Diamonds — LKR 170</option>
+      <option>100 Diamonds — LKR 320</option>
+      <option>200 Diamonds — LKR 640</option>
+      <option>310 Diamonds — LKR 970</option>
+      <option>520 Diamonds — LKR 1620</option>
+      <option>1060 Diamonds — LKR 3200</option>
+      <option>1580 Diamonds — LKR 4820</option>
+    </select>
+
+    <button
+      type="button"
+      onclick="sendOrder()"
+      class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 rounded-2xl"
+    >
+      Order Now on WhatsApp
+    </button>
+
+  </form>
+</div>
+
+<script>
+function sendOrder() {
+  const uid = document.getElementById("uid").value;
+  const pkg = document.getElementById("package").value;
+
+  const msg =
+    "Hello EX.KAVIYA!%0A%0AI want to order:%0A" +
+    pkg +
+    "%0AUID: " +
+    uid;
+
+  window.open("https://wa.me/94726198188?text=" + msg, "_blank");
+}
+</script>
 </body>
 </html>
