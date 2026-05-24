@@ -34,6 +34,101 @@
   </div>
 
 </div>
+<!-- PRICE LIST IMAGE -->
+<div class="mt-10">
+  <img
+    src="./price.jpg"
+    alt="EX.KAVIYA Price List"
+    class="w-full rounded-3xl shadow-2xl border border-cyan-500"
+  />
+</div>
 
+<!-- WHATSAPP BUTTON -->
+<div class="bg-green-600 rounded-3xl p-6 mt-8 text-center">
+  <h2 class="text-2xl font-bold">WhatsApp Orders</h2>
+  <a
+    href="https://wa.me/94726198188"
+    target="_blank"
+    class="text-3xl font-black underline"
+  >
+    0726198188
+  </a>
+</div>
+
+<!-- EZ CASH -->
+<div class="bg-orange-500 rounded-3xl p-6 mt-6">
+  <h2 class="text-2xl font-bold">eZ Cash Wallet Top-Up</h2>
+  <p class="mt-2 text-xl font-bold">
+    Send payment to: 0779887708
+  </p>
+  <p class="mt-2">
+    Payment screenshot එක සහ UID එක WhatsApp එකෙන් එවන්න.
+  </p>
+</div>
+
+<!-- ORDER FORM -->
+<div class="bg-white/10 rounded-3xl p-6 mt-8">
+  <h2 class="text-3xl font-bold mb-4">Place Your Order</h2>
+
+  <input
+    id="uid"
+    type="text"
+    placeholder="Enter Free Fire UID"
+    class="w-full p-3 rounded-xl text-black mb-4"
+  />
+
+  <select
+    id="package"
+    class="w-full p-3 rounded-xl text-black mb-4"
+  >
+    <option>25 Diamonds — LKR 85</option>
+    <option>50 Diamonds — LKR 170</option>
+    <option>100 Diamonds — LKR 320</option>
+    <option>200 Diamonds — LKR 640</option>
+    <option>310 Diamonds — LKR 970</option>
+    <option>520 Diamonds — LKR 1620</option>
+    <option>1060 Diamonds — LKR 3200</option>
+    <option>1580 Diamonds — LKR 4820</option>
+    <option>2180 Diamonds — LKR 6480</option>
+    <option>5000 Diamonds — LKR 14685</option>
+    <option>5600 Diamonds — LKR 16000</option>
+    <option>11500 Diamonds — LKR 32950</option>
+  </select>
+
+  <!-- SCREENSHOT UPLOAD -->
+  <input
+    id="payment"
+    type="file"
+    accept="image/*"
+    class="w-full mb-4"
+  />
+
+  <button
+    onclick="sendOrder()"
+    class="w-full bg-cyan-500 hover:bg-cyan-600 p-4 rounded-2xl text-xl font-bold"
+  >
+    Order Now on WhatsApp
+  </button>
+</div>
+
+<script>
+function sendOrder() {
+  const uid = document.getElementById("uid").value;
+  const pack = document.getElementById("package").value;
+
+  const msg =
+    "🔥 EX.KAVIYA Order%0A" +
+    "UID: " + uid + "%0A" +
+    "Package: " + pack + "%0A%0A" +
+    "Payment screenshot attached.";
+
+  window.open(
+    "https://wa.me/94726198188?text=" + msg,
+    "_blank"
+  );
+
+  alert("Order ready ✅ WhatsApp open වෙයි. Screenshot එක attach කරලා send කරන්න.");
+}
+</script>
 </body>
 </html>
