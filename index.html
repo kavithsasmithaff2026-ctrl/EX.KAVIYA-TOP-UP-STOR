@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EX.KAVIYA TOP UP STORE</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>EX.KAVIYA TOP UP STORE</title><script>
+function sendOrder() {
+  const uid = document.getElementById("uid").value;
+  const pkg = document.getElementById("package").value;
+
+  if (!uid) {
+    alert("කරුණාකර UID එක දාන්න.");
+    return;
+  }
+
+  alert(
+    "Order received! ✅\n\n" +
+    "Package: " + pkg + "\n" +
+    "UID: " + uid + "\n\n" +
+    "දැන් WhatsApp open වෙයි. Payment screenshot එකත් attach කරලා send කරන්න 🙂"
+  );
+
+  const msg =
+    "Hello EX.KAVIYA!%0A%0A" +
+    "New Order ✅%0A" +
+    "Package: " + pkg + "%0A" +
+    "UID: " + uid + "%0A%0A" +
+    "Payment screenshot attached.";
+
+  window.open(
+    "https://wa.me/94726198188?text=" + msg,
+    "_blank"
+  );
+}
+</script>
+  
 </head>
 <body class="min-h-screen bg-gradient-to-b from-slate-950 via-blue-950 to-black text-white p-6">
 
