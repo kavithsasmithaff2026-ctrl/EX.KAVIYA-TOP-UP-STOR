@@ -1,4 +1,4 @@
-export default function ExKaviyaTopupStore() {
+import logo from "./IMG-20260523-WA0057.jpg"; export default function ExKaviyaTopupStore() {
   const packages = [
     ["25 Diamonds", "LKR 85"],
     ["50 Diamonds", "LKR 170"],
@@ -14,8 +14,13 @@ export default function ExKaviyaTopupStore() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-blue-950 to-black text-white p-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center py-10">
-          <h1 className="text-5xl font-black tracking-wide text-cyan-400">EX.KAVIYA</h1>
-          <p className="text-2xl font-semibold mt-2">Diamond Store</p>
+<div className="flex justify-center mb-6">
+  <img
+    src={logo}
+    alt="EX.KAVIYA Logo"
+    className="w-40 h-40 rounded-full object-cover border-4 border-purple-500 shadow-2xl"
+  />
+</div>          <p className="text-2xl font-semibold mt-2">Diamond Store</p>
           <p className="mt-3 text-slate-300">Fast • Safe • Trusted</p>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
